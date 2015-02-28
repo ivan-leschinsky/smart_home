@@ -1,1 +1,22 @@
-= line_chart @temperatures
+.row
+  .well.col-sm-4
+    - if Temperature.last
+      h1= Temperature.last.temp
+      p Температура сейчас
+
+  .well.col-sm-4
+    - if Humidity.last
+      h1= Humidity.last.humidity
+      p Влажность сейчас
+
+  .well.col-sm-4
+    - if Pressure.last
+      h1= Pressure.last.pressure
+      p Давление сейчас
+.row
+  h3.center-text Температура
+  = line_chart @temperatures
+  h3.center Влажность(DHT11)
+  = line_chart @humidities
+  h3 Давление
+  = line_chart @pressures
