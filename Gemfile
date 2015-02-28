@@ -8,11 +8,15 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'slim'
+gem 'chartkick'
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug'
 end
 gem 'bootstrap-sass'
 gem 'high_voltage'
