@@ -1,5 +1,5 @@
 class Temperature < ActiveRecord::Base
   def self.chart_data
-    'temp'
+    all.select(:temp).group(:created_at, :temp).count.keys
   end
 end

@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228102404) do
+ActiveRecord::Schema.define(version: 20150228110830) do
+
+  create_table "humidities", force: :cascade do |t|
+    t.string   "humidity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pressures", force: :cascade do |t|
+    t.string   "pressure"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "temperatures", force: :cascade do |t|
     t.string   "temp"
