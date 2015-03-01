@@ -6,9 +6,10 @@ class TemperaturesController < ApplicationController
   end
 
   def update
-    Temperature.create(permitted_params.slice(:temp))
-    Humidity.create(permitted_params.slice(:humidity))
-    Pressure.create(permitted_params.slice(:pressure))
+    Temperature.create(permitted_params.slice(:temp)) if permitted_params.slice(:temp).present?
+    Humidity.create(permitted_params.slice(:humidity)) if permitted_params.slice(:humidity).present?
+    Pressure.create(permitted_params.slice(:pressure)) if permitted_params.slice(:pressure).present?
+    head :ok
   end
 
   private
