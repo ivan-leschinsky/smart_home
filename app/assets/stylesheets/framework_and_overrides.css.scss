@@ -38,7 +38,6 @@ main {
   background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
   }
 section {
   @extend .row;
@@ -47,4 +46,20 @@ section {
 
 .container.root {
   padding-top: 60px;
+}
+
+.green {
+  color: #4cae4c;
+}
+
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+}
+
+main {
+  flex: 1;
 }
